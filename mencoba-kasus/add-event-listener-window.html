@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mencoba addEventListener pada window" />
+    <meta name="keywords" content="addEventListener, window, event handling" />
+    <meta name="author" content="Daffa Badran" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+    <title>memahami dan mencoba addEventListener</title>
+    <script>
+      // menggunakan addEventListener untuk menangani event load pada window
+      window.addEventListener("load", function () {
+        document.getElementById("demo").innerHTML =
+          "Halaman telah dimuat sepenuhnya!";
+      });
+    </script>
+  </head>
+  <body>
+    <!-- yang pertama adalah cara kerja dan contoh penggunaan dengan window -->
+    <h1>addEventListener pada window</h1>
+    <p id="demo">Tunggu sebentar...</p>
+  </body>
+</html>

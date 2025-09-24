@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mencoba kasus preventDefault pada event JavaScript"
+    />
+    <meta name="keywords" content="preventDefault, event, JavaScript" />
+    <meta name="author" content="Daffa Badran" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+    <title>belajar dan memahami prevent default</title>
+  </head>
+  <body>
+    <a href="https://google.com" id="myLink">Klik Saya!</a>
+    <br />
+    <hr />
+    <!-- a untuk latihan dibawah ini -->
+    <a href="#" id="demoLink" role="button" tabindex="0">Klik untuk alert</a>
+
+    <!-- event target -->
+    <script>
+      document.getElementById("myLink").addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("Elemen yang diklik:", event.target); // <a href="...">
+        console.log("Jenis event:", event.type); // "click"
+      });
+
+      //   latihan modifikasi link menjadi tombol, tujuan: ubah link agar berprilaku seperti tombol
+
+      document.getElementById("demoLink").addEventListener("click", (event) => {
+        event.preventDefault();
+        alert("berhasil diklik! menggunakan alert dan memasang preventDefault");
+        console.log(
+          "tautan telah diklik, tetapi tidak diarahkan ke URl karena menggunakan preventDefault"
+        );
+      });
+    </script>
+  </body>
+</html>

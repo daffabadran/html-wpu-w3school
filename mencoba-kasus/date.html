@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mencoba kasus date pada JavaScript" />
+    <meta name="keywords" content="JavaScript, Date, belajar web" />
+    <meta name="author" content="Daffa Badran" />
+    <title>date javascript</title>
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+  </head>
+  <body>
+    <h1>Mencoba date dan memahaminya (javascript)</h1>
+    <script>
+      //   let now = new Date();
+      //   console.log(now);
+      //di atas adalah contoh penggunaan objek Date untuk mendapatkan tanggal dan waktu saat ini
+
+      //cara menggunakan objek Date untuk mendapatkan tanggal dan waktu tertentu
+      //kode di atas adalah contoh 1 - tanpa argumen
+      //2 - dengan argumen berupa string tanggal
+      let d = new Date("2023-10-01");
+      console.log(d);
+
+      //3 - dengan angka tahun, bulan, tanggal, dst
+      let d2 = new Date(2025, 9, 7); // bulan dimulai dari 0 (Januari)
+      console.log(d2);
+
+      //contoh lengap
+      let now = new Date();
+      let tanggal = now.getDate();
+      let bulan = now.getMonth() + 1; // bulan dimulai dari 0, disini ditambahkan 1 karena januari adalah 0
+      let tahun = now.getFullYear();
+
+      console.log(`Tanggal sekarang adalah ${tanggal}/${bulan}/${tahun}`);
+      //contoh di atas adalah cara untuk mendapatkan tanggal, bulan, dan tahun dari objek Date dengan menggunakan template literal
+      console.log(
+        "Tanggal sekarang adalah " + tanggal + "/" + bulan + "/" + tahun
+      );
+    </script>
+  </body>
+</html>

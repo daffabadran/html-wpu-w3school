@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window onload</title>
+    <script>
+      window.onload = function () {
+        document.getElementById("demo").innerHTML =
+          "Halaman telah dimuat sepenuhnyaa!";
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Halaman web</h1>
+    <p id="demo">tunggu sebentar..</p>
+  </body>
+
+  <!-- dengan menggunakan window.onload akan memastikan semua hal selain javascript dimuat terlebih dahulu -->
+  <!-- kesalahan umum yang sering terjadi adalah menulis lebih dari satu window overload, jika menggunakan window.overload lebih dari satu maka akan saling menimpa dan hanya akan menggunakan window.overload terakhir atau yang paling baru di ketik -->
+</html>

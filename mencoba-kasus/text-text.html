@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mencoba teks pada HTML" />
+    <meta name="keywords" content="HTML, teks, belajar web" />
+    <meta name="author" content="Daffa Badran" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+    <title>teks - teks</title>
+  </head>
+  <body>
+    <!-- memahami dan mencoba teks content, inner teks, innerHTML dll -->
+    <div id="contoh">
+      <p style="display: none">Teks tersembunyi</p>
+      <p>Teks terlihat</p>
+    </div>
+    <script>
+      var elemen = document.getElementById("contoh");
+      console.log("textContent: " + elemen.textContent);
+      console.log("innerText: " + elemen.innerText);
+      // Hasil:
+      // textContent: "Teks tersembunyiTeks terlihat"
+      // innerText: "Teks terlihat"
+    </script>
+  </body>
+</html>

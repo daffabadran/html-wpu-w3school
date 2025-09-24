@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mencoba addEventListener pada window" />
+    <meta name="keywords" content="addEventListener, window, event handling" />
+    <meta name="author" content="Daffa Badran" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+    <title>memahami dan mencoba addEventListener</title>
+  </head>
+  <body>
+    <!-- yang pertama adalah cara kerja dan contoh penggunaan dengan window -->
+    <button id="myButton">Klik saya!</button>
+    <p id="message"></p>
+
+    <script>
+      //fungsi callback untuk event click
+      function greeting(event) {
+        document.getElementById("message").innerHTML =
+          "Halo, Anda telah mengklik tombol!";
+      }
+
+      //mendapatkan referensi ke tombol
+      let button = document.getElementById("myButton");
+
+      //menambahkan event listener yang hanya berjalan sekali
+      button.addEventListener(
+        "click",
+        function () {
+          console.log(
+            "listener yang hanya berjalan sekali ini, tidak akan memunculkan log lagi setelah ini."
+          );
+        },
+        { once: true }
+      );
+
+      button.addEventListener("click", greeting);
+    </script>
+  </body>
+</html>

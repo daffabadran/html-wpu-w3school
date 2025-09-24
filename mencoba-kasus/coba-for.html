@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coba for</title>
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+  </head>
+  <body>
+    <p class="city">Tokyo</p>
+    <p class="city">Bandung</p>
+    <p class="city">Osaka</p>
+
+    <!-- <button onclick="toggleCities()">Hide City</button> -->
+    <button onclick="showCities()">tampilkan</button>
+    <button onclick="myFunction()">sembunyikan</button>
+    <button onclick="toggleCities()">button</button>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (let i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+      }
+
+      function showCities() {
+        var x = document.getElementsByClassName("city");
+        for (let i = 0; i < x.length; i++) {
+          x[i].style.display = "block"; //menampilkan
+        }
+      }
+
+      function toggleCities() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+          if (x[i].style.display === "none") {
+            x[i].style.display = "block"; // Tampilkan
+          } else {
+            x[i].style.display = "none"; // Sembunyikan
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mencoba kasus preventDefault pada event JavaScript"
+    />
+    <meta name="keywords" content="setTimeout, JavaScript" />
+    <meta name="author" content="Daffa Badran" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../images/icon/favicon (3).ico"
+    />
+    <title>Mencoba dan memahami setTimeout</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(() => {
+        alert("mencoba belajar setTimeout");
+      }, 3000); // Menampilkan alert setelah 3 detik
+
+      //   membuat setTimeout beruntun
+      setTimeout(() => {
+        alert("setTimeout 1");
+        setTimeout(() => {
+          alert("setTimeout 2");
+          setTimeout(() => {
+            alert("setTimeout 3");
+          }, 1000); // Menampilkan alert setelah 1 detik
+        }, 2000);
+      }, 3000);
+
+      //   membuat setTimeout dengan menggunakan fungsi
+      function tampilkanPesan(pesan, waktu) {
+        setTimeout(() => {
+          alert(pesan);
+        }, waktu);
+      }
+      tampilkanPesan(
+        "ini adalah pesan alert menggunakan parameter variabel",
+        1500
+      );
+    </script>
+  </body>
+</html>
