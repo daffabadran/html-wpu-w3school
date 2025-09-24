@@ -1,0 +1,30 @@
+.container {
+  width: 600px;
+  border: 5px solid #000;
+  margin: 30px auto;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  /* align-items: center; */
+  height: 400px;
+}
+
+.container div {
+  /* width: 100px; */
+  height: 120px;
+  flex: 1;
+  /* height: 100px; */
+  background-color: antiquewhite;
+  margin: 2px;
+}
+
+.container .dua {
+  align-self: flex-end;
+  order: 2;
+}
+
+.container .tiga {
+  order: 1;
+}

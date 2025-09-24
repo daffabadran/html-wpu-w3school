@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Belajar flexbox bagian-2, cara membuat layout dengan flexbox"
+    />
+    <meta name="keywords" content="flexbox, layout, CSS" />
+    <meta name="author" content="Daffa Badran" />
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../../images/icon/favicon (3).ico"
+    />
+    <link rel="stylesheet" href="flexbox-bagian2.css" />
+    <title>Flexbox bagian-2 latihan</title>
+  </head>
+  <body>
+    <!-- latihan 1, kolom -->
+    <div class="container-satu">
+      <div class="kolom-utama">
+        <h1>Japan</h1>
+        <p>
+          Jepang, negeri matahari terbit, adalah negara yang memadukan kemajuan
+          teknologi dengan tradisi kuno yang masih terjaga. Negara ini terkenal
+          dengan keramahan penduduknya, sistem transportasi yang efisien, serta
+          keindahan empat musim yang berbeda. Dari festival budaya, seni, hingga
+          inovasi modern, Jepang selalu menawarkan pengalaman yang unik bagi
+          setiap pengunjung.
+        </p>
+        <p>
+          Selain itu, Jepang juga dikenal sebagai salah satu destinasi wisata
+          teraman di dunia, dengan lingkungan yang bersih dan teratur. Keindahan
+          alam seperti pegunungan, danau, serta pantai, berpadu harmonis dengan
+          kota-kota modern yang penuh warna.
+        </p>
+        <hr style="margin: 32px 0; border: none; border-top: 2px solid #eee" />
+        <div style="margin-bottom: 24px" id="tokyo">
+          <h3 id="tokyo">Tokyo</h3>
+          <img
+            src="../../images/zach-miles-BE9AifuJfD4-unsplash.jpg"
+            alt="Tokyo City"
+          />
+          <p>
+            Tokyo adalah kota metropolitan terbesar di dunia, pusat teknologi,
+            mode, dan hiburan. Salah satu momen paling indah di Tokyo adalah
+            saat musim semi, ketika bunga sakura bermekaran di taman-taman
+            seperti Ueno Park dan Shinjuku Gyoen.
+          </p>
+          <blockquote
+            cite="https://www.japan.travel/en/destinations/kanto/tokyo/"
+          >
+            “Tokyo is a city that blends the ultramodern and the traditional,
+            from neon-lit skyscrapers to historic temples.”
+            <br />
+            <span style="font-size: 0.9em">— japan.travel</span>
+          </blockquote>
+        </div>
+        <div style="margin-bottom: 24px" id="kyoto">
+          <h3 id="kyoto">Kyoto</h3>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+            alt="Kyoto Temple"
+          />
+          <p>
+            Kyoto adalah jantung budaya Jepang, terkenal dengan kuil-kuil kuno,
+            taman tradisional, dan festival seperti Gion Matsuri. Kota ini juga
+            menjadi tempat terbaik untuk menikmati suasana Jepang klasik dan
+            melihat geisha.
+          </p>
+          <blockquote
+            cite="https://www.japan.travel/en/destinations/kansai/kyoto/"
+          >
+            “Kyoto is home to countless shrines, temples, and gardens, and is
+            the best place in Japan to experience traditional culture.”
+            <br /><span style="font-size: 0.9em">— japan.travel</span>
+          </blockquote>
+        </div>
+        <div style="margin-bottom: 24px" id="fukuoka">
+          <h3 id="fukuoka">Fukuoka</h3>
+          <img
+            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+            alt="Fukuoka City"
+          />
+          <p>
+            Fukuoka adalah kota pelabuhan di pulau Kyushu yang terkenal dengan
+            kuliner ramen Hakata, festival Yamakasa, dan pantai yang indah. Kota
+            ini juga menjadi pintu gerbang ke Asia daratan.
+          </p>
+          <blockquote
+            cite="https://www.japan.travel/en/destinations/kyushu/fukuoka/"
+          >
+            “Fukuoka is a lively city with a laid-back atmosphere, delicious
+            food, and a gateway to the rest of Asia.”
+            <br /><span style="font-size: 0.9em">— japan.travel</span>
+          </blockquote>
+        </div>
+        <div style="margin-bottom: 24px" id="osaka">
+          <h3 id="osaka">Osaka</h3>
+          <img
+            src="https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=600&q=80"
+            alt="Osaka Dotonbori"
+          />
+          <p>
+            Osaka dikenal sebagai "dapur" Jepang, surga kuliner seperti takoyaki
+            dan okonomiyaki. Selain itu, Osaka Castle dan kawasan Dotonbori
+            menjadi ikon wisata yang wajib dikunjungi.
+          </p>
+          <blockquote
+            cite="https://www.japan.travel/en/destinations/kansai/osaka/"
+          >
+            “Osaka is famous for its food, fun, and friendly people. The city is
+            a vibrant hub of culture and entertainment.”
+            <br /><span style="font-size: 0.9em">— japan.travel</span>
+          </blockquote>
+        </div>
+        <p>
+          Setiap kota di Jepang memiliki keunikan tersendiri yang membuat
+          perjalanan Anda semakin berkesan, terutama saat musim sakura tiba dan
+          seluruh negeri dipenuhi warna pink yang menawan.
+        </p>
+      </div>
+      <div class="sidebar-satu">
+        <h3>Cities</h3>
+        <ul>
+          <li><a href="#tokyo">Tokyo</a></li>
+          <li><a href="#kyoto">Kyoto</a></li>
+          <li><a href="#fukuoka">Fukuoka</a></li>
+          <li><a href="#osaka">Osaka</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-dua">
+        <h3>Highlight</h3>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio veniam
+        omnis error eius enim veritatis!
+      </div>
+    </div>
+    <!-- batas container -->
+    <!-- dari sini belajar dulu, nanti perbagusnya hari ini 4 juni 2025 -->
+    <div class="container-dua">
+      <div class="layanan satu">
+        <h4>Layanan 1</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          deserunt. Eveniet fuga ut iste placeat, numquam quaerat delectus,
+          voluptatem cum recusandae commodi cupiditate molestias, ducimus maxime
+          odio neque. Id, commodi.
+        </p>
+      </div>
+      <span class="batas"><hr /></span>
+      <div class="layanan dua">
+        <h4>Layanan 2</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          deserunt. Eveniet fuga ut iste placeat, numquam quaerat delectus,
+          voluptatem cum recusandae commodi cupiditate molestias, ducimus maxime
+          odio neque. Id, commodi.
+        </p>
+      </div>
+      <span class="batas"><hr /></span>
+      <div class="layanan tiga">
+        <h4>Layanan 3</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          deserunt. Eveniet fuga ut iste placeat, numquam quaerat delectus,
+          voluptatem cum recusandae commodi cupiditate molestias, ducimus maxime
+          odio neque. Id, commodi.
+        </p>
+      </div>
+      <span class="batas"><hr /></span>
+    </div>
+
+    <div class="container-tiga">
+      <figure>
+        <img src="../../images/gambar-besar/1.png" alt="" />
+        <img src="../../images/gambar-besar/2.png" alt="" />
+        <img src="../../images/gambar-besar/3.png" alt="" />
+        <img src="../../images/gambar-besar/4.png" alt="" />
+        <img src="../../images/gambar-besar/5.png" alt="" />
+        <img src="../../images/gambar-besar/6.png" alt="" />
+        <figcaption>ini adalah contoh gallery</figcaption>
+      </figure>
+    </div>
+
+    <div class="container-empat">
+      <div class="card">
+        <img src="" alt="" />
+        <div class="card-content">
+          <h2>Judul Card</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+            sapiente.
+          </p>
+          <button>Pelajari lebih lenjut</button>
+        </div>
+      </div>
+      <div class="card sale">
+        <img src="" alt="" />
+        <div class="card-content">
+          <h2>Judul Card</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+            sapiente.
+          </p>
+          <button>Pelajari lebih lenjut</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="" alt="" />
+        <div class="card-content">
+          <h2>Judul Card</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+            sapiente.
+          </p>
+          <button>Pelajari lebih lenjut</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lima">
+      <div class="kotak">
+        <span><p>violet evergarden, kadokawa</p></span>
+      </div>
+    </div>
+    z
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Daffa Badran &middot; Flexbox Latihan</p>
+        <p>
+          <a
+            href="https://github.com/daffabadran"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          &bull;
+          <a href="mailto:daffa@email.com">Email</a>
+        </p>
+      </div>
+    </footer>
+    <button id="toTopBtn">↑ Top</button>
+    <script>
+      // Show button when scroll down
+      window.addEventListener("scroll", function () {
+        const btn = document.getElementById("toTopBtn");
+        if (window.scrollY > 200) {
+          btn.style.display = "block";
+          btn.style.opacity = "1";
+        } else {
+          btn.style.opacity = "0";
+          setTimeout(() => {
+            btn.style.display = "none";
+          }, 300);
+        }
+      });
+      // Scroll to top
+      document.getElementById("toTopBtn").onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      // Smooth scroll for sidebar navigation
+      document
+        .querySelectorAll('.sidebar-satu a[href^="#"]')
+        .forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

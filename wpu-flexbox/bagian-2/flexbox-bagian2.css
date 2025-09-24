@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  line-height: 1.65;
+  padding-bottom: 0; /* Hapus jarak scroll bawah */
+}
+
+.container-satu {
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  text-align: left;
+}
+
+.kolom-utama {
+  flex: 3;
+  order: 2;
+  margin: 0 30px;
+}
+
+.kolom-utama > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar-satu {
+  flex: 1;
+  order: 1;
+  margin: 40px 0;
+}
+
+.sidebar-satu ul {
+  list-style: none;
+  padding: 0;
+  /* background-color: #666; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.sidebar-satu ul li {
+  /* background-color: #ccc; */
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-satu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #333;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar-satu ul li a:hover {
+  background: #444;
+  color: #fff;
+  transform: translateX(5px) scale(1.03);
+}
+
+.sidebar-dua {
+  flex: 1;
+  order: 3;
+  margin: 40px 0;
+}
+
+.container-dua {
+  max-width: 1200px;
+  margin: 200px auto;
+}
+
+.layanan.satu {
+  background-color: lightskyblue;
+}
+
+.layanan.dua {
+  background-color: salmon;
+}
+
+.layanan.tiga {
+  background-color: lightgreen;
+}
+
+.layanan {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.batas hr {
+  width: 80px;
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.container-tiga {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+figure {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+figure img {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.container-empat {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: inherit;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.card {
+  flex: 1;
+  margin: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card.sale {
+  transform: scale(1.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.card-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.container-lima {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  display: flex;
+}
+
+.kotak {
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+}
+
+.kotak span {
+  margin: auto;
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px #aaa;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+#tokyo img,
+#kyoto img,
+#fukuoka img,
+#osaka img {
+  width: 100%;
+  max-width: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #ccc;
+  margin-bottom: 8px;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* Responsive breakpoints */
+@media screen and (min-width: 600px) {
+  .container-dua {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .layanan {
+    width: 30%;
+  }
+
+  .batas hr {
+    display: none;
+  }
+
+  figure img {
+    width: 30%;
+  }
+}
+
+.main-footer {
+  background: linear-gradient(to right, #444, #222);
+  color: #fff;
+  padding: 32px 0 24px 0;
+  text-align: center;
+  margin-top: 0; /* Hapus jarak atas */
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 12px #0002;
+  width: 100vw; /* Penuh lebar layar */
+  position: static;
+}
+
+.main-footer .footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.main-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

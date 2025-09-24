@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  background-color: #333;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-weight: 500;
+}
+
+nav .logo {
+  margin-left: 20px;
+  font-family: "Merriweather", serif;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  /* background-color: antiquewhite; */
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  opacity: 1;
+  margin-right: 50px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+nav ul li a:hover {
+  color: #bab6b6;
+}
+
+/* hamburger */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  display: none;
+  position: relative;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  top: -5px;
+  left: -6px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/* hamburger menu animation */
+.menu-toggle :nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle :nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-3px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(0, -1px);
+  background-color: red;
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale();
+}
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    background-color: #333;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    justify-content: space-evenly;
+    z-index: -1;
+    width: 80%;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+  }
+
+  nav .menu-toggle {
+    display: flex;
+    margin-right: 20px;
+  }
+}
