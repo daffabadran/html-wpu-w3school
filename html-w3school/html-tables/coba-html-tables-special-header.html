@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML TABLES</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon (3).ico" />
+    <style>
+      body {
+        margin-bottom: 100px;
+        margin-top: 50px;
+      }
+      hr {
+        width: 90%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+      th {
+        text-align: left;
+      }
+
+      .tabel-pertama tr:nth-child(odd) {
+        background-color: lightpink;
+      }
+
+      .tabel-kedua td:nth-child(odd),
+      .tabel-kedua th:nth-child(odd) {
+        background-color: lightskyblue;
+        /* color: whitesmoke; */
+      }
+
+      .tabel-ketiga th {
+        text-transform: uppercase;
+        background-color: #222;
+        color: whitesmoke;
+      }
+      .tabel-ketiga th,
+      .tabel-ketiga td {
+        text-align: center;
+        border: none;
+      }
+      .tabel-ketiga {
+        border-collapse: collapse;
+        border: none;
+      }
+      .tabel-ketiga tr {
+        border-bottom: 1px solid #000;
+      }
+      .tabel-ketiga tr:hover {
+        background-color: #333;
+        color: whitesmoke;
+        cursor: help;
+      }
+      .tabel-ketiga th:hover {
+        cursor: default;
+      }
+      .tabel-keempat th,
+      .tabel-keempat td {
+        text-transform: uppercase;
+      }
+      .tabel-keempat th {
+        background-color: aquamarine;
+      }
+      .tabel-keempat td:nth-of-type(even) {
+        background-color: aquamarine;
+      }
+
+      .tabel-kelima,
+      .tabel-kelima td,
+      .tabel-kelima th {
+        border: none;
+      }
+      .tabel-kelima tr {
+        border-bottom: 1px solid #000;
+      }
+      /* .tabel-kelima tr {
+        color: black;
+      } */
+      .tabel-kelima th {
+        text-transform: uppercase;
+        text-align: center;
+        color: black;
+      }
+      .tabel-kelima td {
+        text-align: center;
+      }
+
+      .tabel-kelima tr:hover {
+        color: white;
+        background-color: #333;
+        cursor: help;
+      }
+      .tabel-kelima th:hover {
+        cursor: default;
+      }
+      .tabel-kelima th:nth-of-type(1) {
+        background-color: #fff;
+      }
+      .tabel-kelima th:nth-of-type(2) {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>~ HTML TABLES</h1>
+    <caption>
+      ini adalah tabel header
+    </caption>
+    <table
+      title="tabel pertama Table Headers"
+      width="50%"
+      class="tabel-pertama"
+    >
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Rrn</td>
+        <td>Aureole</td>
+        <td>1100</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <hr />
+    <h2>Vertical Table Headers</h2>
+    <caption>
+      The first column becomes table headers if you set the first table cell in
+      each table row to a TH element:
+    </caption>
+
+    <table style="width: 60%" class="tabel-kedua">
+      <tr>
+        <th>Firstname</th>
+        <td>Jill</td>
+        <td>Eve</td>
+        <td>Rrn</td>
+      </tr>
+      <tr>
+        <th>Lastname</th>
+        <td>Smith</td>
+        <td>Jackson</td>
+        <td>Aureole</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>50</td>
+        <td>94</td>
+        <td>1100</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <hr />
+
+    <h2>Header multi kolom</h2>
+    <caption>
+      colspan: Menggabungkan beberapa kolom. INI TABEL CONTOH MULTI KOLOM
+    </caption>
+    <table title="coba colspan" width="55%" class="tabel-ketiga">
+      <tr>
+        <th colspan="2">full name</th>
+        <th>age</th>
+      </tr>
+      <tr>
+        <td>jil</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>eve</td>
+        <td>jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>rrn</td>
+        <td>aureole</td>
+        <td>1100</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <hr />
+
+    <h2>COLSPAN AND ROWSPAN</h2>
+    <caption>
+      Rowspan: phone
+    </caption>
+    <table title="tabel Rowspan" width="70%" class="tabel-keempat">
+      <tr>
+        <th>name</th>
+        <td>jill</td>
+        <td>rrn</td>
+        <td>frieren</td>
+        <td>fern</td>
+      </tr>
+      <tr>
+        <th rowspan="2">phone</th>
+        <td>555-1234</td>
+        <td>777-3214</td>
+        <td>888-7777</td>
+        <td>999-888</td>
+      </tr>
+      <tr>
+        <td>888-748</td>
+        <td>777-5678</td>
+        <td>888-8787</td>
+        <td>999-8989</td>
+      </tr>
+      <tr>
+        <th>alamat</th>
+        <td>olala</td>
+        <td>ende</td>
+        <td>tengoku</td>
+        <td>tengoku</td>
+      </tr>
+    </table>
+    <br /><br /><br />
+
+    <caption>
+      colspan: name
+    </caption>
+    <table title="colspan" width="40%" class="tabel-kelima">
+      <tr>
+        <th colspan="2">fullname</th>
+        <th>age</th>
+      </tr>
+      <tr>
+        <td>jill</td>
+        <td>smith</td>
+        <td>43</td>
+      </tr>
+      <tr>
+        <td>eve</td>
+        <td>jackson</td>
+        <td>57</td>
+      </tr>
+    </table>
+
+    <!-- dalam kode diatas, untuk membuat sebuah tabel, semua komponen dibungkus kedalam tag tabel, didalamnya terdapat tag th,tr dan td,
+    
+      setiap baris yang dibuat walaupun itu TH (table header), semua dibuat kedalam tag TR (table row).
+
+      jumlah penggunaan TR tergantung pada jumlah TH yang digunakan.
+    -->
+
+    <!-- 
+      NAMUN DALAM BEBERAPA KASUS, HTML TABLE BISA MEMPUNYAI TABLE UNTUK MASING MASING BARIS ATAUPUN KOLOM ATAU BAKAN 1 TH UNTUK SEMUA KOLOM DAN BARIS
+     -->
+  </body>
+</html>

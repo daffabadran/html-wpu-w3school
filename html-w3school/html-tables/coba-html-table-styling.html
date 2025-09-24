@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table styling</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon (3).ico" />
+
+    <style>
+      body {
+        margin-bottom: 100px;
+      }
+      div {
+        margin-top: 50px;
+      }
+      table,
+      td {
+        padding: 8px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 700px;
+      }
+
+      .first-table table tr:nth-child(even) {
+        background-color: #d6eeee;
+      }
+
+      #kedua table td:nth-child(even),
+      #kedua table th:nth-child(even) {
+        background-color: #d6eeee;
+      }
+
+      #kedua td,
+      .third-table td {
+        height: 60px;
+      }
+
+      .third-table table,
+      th,
+      td {
+        width: 750px;
+      }
+
+      .third-table table td:nth-child(even),
+      .third-table th:nth-child(even),
+      .third-table tr:nth-child(even) {
+        background-color: #d6eeee;
+      }
+
+      .fourth-table table {
+        width: 650px;
+        text-align: left;
+        border: none;
+      }
+
+      .fourth-table table td,
+      th {
+        padding: 10px;
+        border: none;
+      }
+
+      .fourth-table table tr {
+        border-bottom: 1px solid black;
+      }
+
+      .fourth-table table tr:hover {
+        background-color: #333;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first-table" title="div table zebra stripes">
+      <caption>
+        table zebra stripes
+      </caption>
+      <table title="zebra stripes">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div
+      class="second-table"
+      title="div table vertical zebra stripes"
+      id="kedua"
+    >
+      <caption>
+        Table vertical zebra stripes
+      </caption>
+      <table title="Vertical zebra stripes">
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div class="third-table">
+      <caption>
+        combine vertical + horizontal stripes table
+      </caption>
+      <table title="table kombinasi vertical dan horizontal">
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+
+    <div class="fourth-table" title="horizontal dividers table">
+      <caption>
+        horizontal dividers table
+      </caption>
+      <table title="horizontal dividers table">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Savings</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Grifin</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Grifin</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>Swanson</td>
+          <td>$300</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coba element pictures</title>
+    <style>
+      .container {
+        /* width: 700px; */
+        border: 2px solid black;
+        margin: 50px auto;
+        height: 600px;
+      }
+
+      picture img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <picture>
+        <source srcset="image" media="(max-width: 776px)" />
+        <source
+          srcset="images/svg/yagmur-cetin-kg5T29q30VI-unsplash.svg"
+          media="(min-width: 576px)"
+        />
+        <img src="" alt="wanita dibawah hujan" />
+      </picture>
+    </div>
+  </body>
+</html>

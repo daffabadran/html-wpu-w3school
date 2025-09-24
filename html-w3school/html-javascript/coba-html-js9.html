@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript</title>
+    <link rel="icon" type="image/icon-x" href="images/icon/favicon (3).ico" />
+  </head>
+  <body>
+    <!-- contoh praktis text content -->
+    <!-- 2. menghitung jumlah karakter -->
+    <textarea name="" id="input" cols="30" rows="10"></textarea>
+    <p>jumlah karakter: <span id="jumlah">0</span></p>
+
+    <script>
+      let input = document.getElementById("input");
+      let jumlah = document.getElementById("jumlah");
+
+      input.addEventListener("input", function () {
+        jumlah.textContent = input.value.length;
+      });
+    </script>
+  </body>
+</html>

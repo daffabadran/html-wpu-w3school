@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript</title>
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../../images/icon/favicon (3).ico"
+    />
+  </head>
+  <body>
+    <!-- menangani event dengan js -->
+    <input type="text" id="input" placeholder="Ketik sesuatu.." />
+    <p id="output"></p>
+
+    <script>
+      // mengambil elemen input dan outout (si tag p)
+      let input = document.getElementById("input");
+      let output = document.getElementById("output");
+      //dibuat dulu variabelnya diatas
+
+      // menambahkan event listener untuk output
+      input.addEventListener("input", function () {
+        output.textContent = "Anda mengetik:" + input.value;
+      });
+
+      // selanjutnya aku akan mendalami text content
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript</title>
+    <link rel="icon" type="image/icon-x" href="../../images/icon/favicon (3).ico" />
+  </head>
+  <body>
+    <button id="tombol">Klik saya</button>
+    
+    <script>
+        // menghapus event listener untuk mencegah hal hal berikut ini
+        // 1. mencegah memory leak
+        // 2. menghindari duplikasi event handler
+        // 3. mengoptimalkan performa
+        // 4. menghindari perilaku yg tidak diharapkan
+
+        let tombol = document.getElementById("tombol");
+        function handleClick() {
+            alert("tombol diklik");
+        }
+
+        tombol.addEventListener("click", handleClick, { once: true });
+        // { once: true } akan membuat event listener hanya berjalan sekali, setelah itu akan dihapus secara otomatis
+        // menghapus event listener
+        // tombol.remove();
+        // ketika aku menambahkan syntax diatas, tombolnya menghilang, aku belum memahaminya karena ini contoh remove dengan DOM
+
+        // tombol.removeEventListener("click", handleClick);
+        // ketika aku menulis sintak ini dan mencobanya dengan mematikan sintak remove, functionnya tidak bekerja dan tidak memberikan feedback apapun
+    </script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="responsive design - latihan flexbox praktis"
+    />
+    <meta name="keywords" content="responsive, design, flexbox, praktis" />
+    <meta name="author" content="Daffa Badran" />
+    <title>responsive design - latihan flexbox praktis</title>
+
+    <!-- KARENA TIDAK LENGKAP DIPUTUSKAN UNTUK BELAJAR DARI WPU MENGENAI FLEXBOX DAN GRID -->
+    <!-- SESI DISINI SELESAI DISINI -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        position: relative; /* Untuk mengatur posisi menu di mobile */
+      }
+
+      .menu {
+        display: flex;
+        list-style: none;
+        gap: 1rem; /* Jarak antar menu item */
+        background-color: wheat;
+        width: 100;
+      }
+      .menu li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+      }
+
+      /* Hmaburger (mobile layout) */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Responsive breakpoints */
+      @media (max-width: 600px) {
+        .menu {
+          /* display: none; */
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* Jarak dari atas navbar */
+          left: 0;
+          width: 100%;
+          background-color: #333;
+          padding: 1rem;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .menu.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Navbar responsif dengan flexbox</h1>
+    <p>Tujuan: Navbar yang menyesuaikan diri di mobile & desktop.</p>
+    <br />
+    <nav>
+      <div class="logo">
+        <ul class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <button class="hamburger">☰</button>
+      </div>
+    </nav>
+  </body>
+</html>

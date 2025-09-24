@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript</title>
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../../images/icon/favicon (3).ico"
+    />
+  </head>
+  <body>
+    <!-- contoh praktis text content -->
+    <!-- 1. mengambil dan mengubah text -->
+    <p id="teks">Halo, dunia</p>
+    <button id="ubah">Ubah teks</button>
+
+    <script>
+      let teks = document.getElementById("teks");
+      let ubah = document.getElementById("ubah");
+
+      ubah.addEventListener("click", function () {
+        teks.textContent = "isi kalimat telah diubah";
+
+        alert(
+          "selamat anda telah mengubah isi kalimat, tutup popup ini untuk melihat perubahannya"
+        );
+      });
+
+      //   dengan sintak di atas aku mengubah isi dari P menjadi isi kalimat telah di ubah, ketika menekan tombol
+    </script>
+  </body>
+</html>

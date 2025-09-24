@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="css layout float" />
+    <meta name="keywords" content="css, layout, float" />
+    <meta name="github copilot" content="try float" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>css template - layout float</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f8fa;
+        color: #222;
+      }
+      header {
+        background: linear-gradient(90deg, #f1f1f1 60%, #4e4444 100%);
+        padding: 36px 0 24px 0;
+        text-align: center;
+        font-size: 38px;
+        color: #2d2d2d;
+        margin: 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+        box-shadow: 0 2px 12px rgba(78, 68, 68, 0.08);
+        border-bottom: 2px solid #e0e0e0;
+      }
+      main {
+        width: 100%;
+        background: #f7f8fa;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        float: left;
+        width: 27%;
+        min-width: 180px;
+        max-width: 320px;
+        background: #fff;
+        border-right: 2px solid #e0e0e0;
+        padding: 32px 0 32px 0;
+        height: 100%;
+        box-sizing: border-box;
+        box-shadow: 2px 0 8px rgba(78, 68, 68, 0.04);
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav ul li {
+        padding: 0;
+        text-align: left;
+        border-bottom: 1px solid #f1f1f1;
+        transition: background 0.2s;
+      }
+      nav ul li:last-child {
+        border-bottom: none;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        width: 100%;
+        padding: 18px 32px;
+        font-size: 1.08em;
+        font-weight: 500;
+        border-radius: 0 24px 24px 0;
+        transition: background 0.2s, color 0.2s;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus {
+        background: #4e4444;
+        color: #fff;
+      }
+      article {
+        float: left;
+        padding: 36px 40px 36px 40px;
+        width: 73%;
+        background: #fff;
+        min-height: 420px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 12px rgba(78, 68, 68, 0.06);
+        border-radius: 0 0 12px 0;
+      }
+      article h1 {
+        font-size: 2em;
+        margin-top: 0;
+        color: #4e4444;
+        letter-spacing: 1px;
+      }
+      article blockquote {
+        text-align: justify;
+        font-size: 1.08em;
+        color: #333;
+        background: #f7f7fa;
+        border-left: 4px solid #b79a9a;
+        margin: 18px 0 32px 0;
+        padding: 18px 24px 18px 18px;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 1px 4px #0001;
+      }
+      article blockquote cite {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.98em;
+        color: #888;
+      }
+      /* clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background: #4e4444;
+        padding: 16px 0;
+        text-align: center;
+        color: #f8f9fa;
+        margin: 0;
+        font-size: 1em;
+        letter-spacing: 1px;
+        border-top: 2px solid #e0e0e0;
+      }
+      @media screen and (max-width: 900px) {
+        nav {
+          width: 100%;
+          float: none;
+          max-width: none;
+          min-width: 0;
+          border-right: none;
+          border-bottom: 2px solid #e0e0e0;
+          box-shadow: none;
+          padding: 16px 0 0 0;
+        }
+        article {
+          width: 100%;
+          float: none;
+          padding: 28px 10vw 28px 10vw;
+          border-radius: 0 0 12px 12px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          float: none;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        nav {
+          background: #333;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+        }
+        nav ul li a {
+          color: #fff;
+          background: none;
+          border-radius: 0;
+          padding: 16px 18px;
+          font-size: 1em;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus {
+          background: #222;
+          color: #b79a9a;
+        }
+        article {
+          background: #fff;
+          box-shadow: none;
+          padding: 18px 4vw 18px 4vw;
+          border-radius: 0 0 8px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS LAYOUT FLOAT</h2>
+    <p>
+      In this example, we have created a header, two columns/boxes and a footer.
+      On smaller screens, the columns will stack on top of each other
+    </p>
+    <p>
+      Resize the browser window to see the responsive effect (you will learn
+      more about this in our next chapter)
+    </p>
+
+    <header>
+      <h2>Cities</h2>
+    </header>
+    <main>
+      <section>
+        <nav>
+          <ul>
+            <li><a href="#tokyo">Tokyo</a></li>
+            <li><a href="#okinawa">Okinawa</a></li>
+            <li><a href="#osaka">Osaka</a></li>
+          </ul>
+        </nav>
+        <article id="tokyo">
+          <h1>Tokyo</h1>
+          <blockquote>
+            <strong>Tokyo</strong> (東京, Tōkyō, bahasa Jepang: [toːkʲoː]; lit.
+            "Ibu kota Timur"), nama resminya Metropolis Tokyo (東京都 Tōkyō-to),
+            adalah salah satu dari 47 prefektur di Jepang yang menjadi ibu kota
+            Jepang sejak 1869. Sampai sekarang, Tokyo Raya menempati peringkat
+            pertama sebagai wilayah metropolitan terpadat di dunia. Tokyo
+            menjadi tempat bertakhtanya Kaisar Jepang, pemerintah Jepang, dan
+            Parlemen Jepang. Tokyo mencakup sebagian dari wilayah Kanto,
+            Kepulauan Izu, dan Kepulauan Ogasawara. Tokyo dulunya bernama Edo
+            ketika Shōgun Tokugawa Ieyasu menjadikan kota ini sebagai markas
+            besarnya pada 1603. Kota ini berganti nama menjadi Tokyo setelah
+            Kaisar Meiji menjadikannya sebagai ibu kota dan memindahkan
+            takhtanya dari Kyoto pada tahun 1868.
+            <cite
+              >Sumber:
+              <a href="https://id.wikipedia.org/wiki/Tokyo" target="_blank"
+                >Wikipedia</a
+              ></cite
+            >
+          </blockquote>
+          <h1 id="okinawa">Okinawa</h1>
+          <blockquote>
+            <strong>Okinawa</strong> (沖縄県, Okinawa-ken) adalah prefektur
+            paling selatan di Jepang, terdiri dari pulau-pulau di Kepulauan
+            Ryukyu. Okinawa terkenal dengan pantai tropis, budaya unik, dan
+            sejarah sebagai Kerajaan Ryukyu sebelum menjadi bagian dari Jepang.
+            Okinawa juga dikenal dengan penduduknya yang berumur panjang dan
+            tradisi kuliner sehat.
+            <cite
+              >Sumber:
+              <a
+                href="https://id.wikipedia.org/wiki/Prefektur_Okinawa"
+                target="_blank"
+                >Wikipedia</a
+              ></cite
+            >
+          </blockquote>
+          <h1 id="osaka">Osaka</h1>
+          <blockquote>
+            <strong>Osaka</strong> (大阪市, Ōsaka-shi) adalah kota terbesar
+            ketiga di Jepang setelah Tokyo dan Yokohama, serta merupakan ibu
+            kota Prefektur Osaka. Kota ini dikenal sebagai pusat ekonomi di
+            wilayah Kansai dan memiliki sejarah panjang sebagai kota pelabuhan
+            dan pusat perdagangan. Osaka juga terkenal dengan budaya kuliner,
+            hiburan, dan keramahan penduduknya. Salah satu ikon kota ini adalah
+            Kastil Osaka dan kawasan hiburan Dōtonbori.
+            <cite
+              >Sumber:
+              <a href="https://id.wikipedia.org/wiki/Osaka" target="_blank"
+                >Wikipedia</a
+              ></cite
+            >
+          </blockquote>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>

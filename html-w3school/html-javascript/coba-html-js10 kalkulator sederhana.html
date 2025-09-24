@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript kalkulator sederhana</title>
+    <link rel="icon" type="image/icon-x" href="images/icon/favicon (3).ico" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .kalkulator {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: right;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .tombol {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      button {
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kalkulator">
+      <input type="text" id="layar" disabled />
+      <div class="tombol">
+        <button onclick="pilih('7')">77</button>
+        <button onclick="pilih('8')">8</button>
+        <button onclick="pilih('9')">9</button>
+        <button onclick="pilih('/')">/</button>
+        <button onclick="pilih('4')">4</button>
+        <button onclick="pilih('5')">5</button>
+        <button onclick="pilih('6')">6</button>
+        <button onclick="pilih('*')">*</button>
+        <button onclick="pilih('1')">1</button>
+        <button onclick="pilih('2')">2</button>
+        <button onclick="pilih('3')">3</button>
+        <button onclick="pilih('-')">-</button>
+        <button onclick="pilih('0')">0</button>
+        <button onclick="pilih('.')">.</button>
+        <button onclick="hitung()">=</button>
+        <button onclick="pilih('+')">+</button>
+      </div>
+    </div>
+    <script>
+      // fungsi untuk menambahkan nilai ke layar
+      function pilih(nilai) {
+        document.getElementById("layar").value += nilai;
+      }
+
+      function hitung() {
+        let layar = document.getElementById("layar");
+        layar.value = eval(layar.value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Belajar HTML dan JavaScript" />
+    <meta name="keywords" content="HTML, JavaScript, belajar web" />
+    <meta name="author" content="daffa badran" />
+    <title>html javascript</title>
+    <link
+      rel="icon"
+      type="image/icon-x"
+      href="../../images/icon/favicon (3).ico"
+    />
+  </head>
+  <body>
+    <h1>js pertamaku</h1>
+    <p id="demo">ini teks belum berubah</p>
+    <p id="ubahCss">mengubah menggunakan js</p>
+
+    <script>
+      // document.getElementById("demo").innerHTML =
+      //   "hello javascript, ini adalah isi dari p";
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello js, berhasil diubah";
+      }
+
+      function gantiGaya() {
+        document.getElementById("ubahCss").style.fontSize = "25px";
+        document.getElementById("ubahCss").style.color = "red";
+        document.getElementById("ubahCss").style.backgroundColor = "yellow";
+      }
+
+      function handleClick() {
+        myFunction();
+        gantiGaya();
+      }
+      //   script diatas tidak bisa digunakan untuk bagian gantiGaya, update, sudah bisa
+      // update. script diatas sudah bisa digunakan, menambah tanda kutip pada parameter ubahCss
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    <button type="button" onclick="handleClick()">Click Me!</button>
+  </body>
+</html>

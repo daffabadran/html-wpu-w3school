@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html javascript</title>
+    <link rel="icon" type="image/icon-x" href="../../images/icon/favicon (3).ico" />
+  </head>
+  <body>
+    <button id="tombol">Klik saya</button>
+    <script>
+        // mencoba "contoh dengan menghapus event listener"
+        let tombol = document.getElementById("tombol");
+        
+        function handleClick() {
+            alert("tombol diklik");
+            tombol.removeEventListener("click", handleClick);
+        }
+        tombol.addEventListener("click", handleClick);
+    </script>
+</html>
