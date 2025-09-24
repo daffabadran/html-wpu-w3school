@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Latihan 1: Menggunakan grid area dan grid gap
+    untuk mengatur layout"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../images/icon/favicon (3).ico"
+    />
+    <title>Grid area dan grid gap latihan - grid gap</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin: 50px auto;
+        width: 60%;
+        /* background-color: #ddd; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "header header header"
+          "sidebar sidebar sidebar"
+          "content content content"
+          "footer footer footer";
+        gap: 0px;
+      }
+
+      .items {
+        background-color: #afc4b0;
+        color: black;
+        /* border: 1px solid #333; */
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      /* .items:nth-child(even) {
+          background-color: #333;
+        } */
+
+      .header {
+        background-color: #ffe9d0;
+        grid-area: header;
+      }
+
+      .sidebar {
+        background-color: #fffed3;
+        grid-area: sidebar;
+      }
+
+      .content {
+        background-color: #bbe9ff;
+        grid-area: content;
+      }
+      .footer {
+        background-color: #b1afff;
+        grid-area: footer;
+      }
+
+      /* Responsive breakpoint */
+      @media screen and (min-width: 576px) {
+        .container {
+          grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "sidebar content content"
+            "footer footer footer";
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items header">header</div>
+      <div class="items sidebar">sidebar</div>
+      <div class="items content">content</div>
+      <div class="items footer">footer</div>
+      <!-- <div class="items">5</div>
+      <div class="items">6</div>
+      <div class="items">7</div>
+      <div class="items">8</div>
+      <div class="items">9</div> -->
+    </div>
+  </body>
+</html>

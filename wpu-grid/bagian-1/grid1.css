@@ -1,0 +1,53 @@
+.container {
+  margin: 50px auto;
+  width: 800px;
+  border: 3px solid gray;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+.container header {
+  background-color: #9fb3df;
+  padding: 70px;
+}
+
+.container .content {
+  width: 100%;
+  /* border: 5px solid red; */
+}
+
+.content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container .sidebar {
+  width: 45%;
+  float: left;
+}
+
+.content aside {
+  background-color: #9ec6f3;
+  padding: 40px;
+}
+
+.container nav {
+  background-color: #bddde4;
+  padding: 45px;
+}
+
+.container main {
+  width: 55%;
+  float: right;
+  background-color: #fff1d5;
+  padding: 110.5px;
+  box-sizing: border-box;
+}
+
+.container footer {
+  background-color: #f3d6d6;
+  padding: 10px;
+}

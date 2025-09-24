@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 700px;
+  margin: 50px auto;
+  display: grid;
+  /* grid-template-columns: 1fr min-content 1fr; */
+  /* jika menggunakan min-content, akan diambil kalimat terpanjang/ kata terpanjang untuk dijadikan sebagai acuan lebar */
+
+  grid-template-columns: 1fr max-content 1fr;
+  /* jika menmggunakan max-content, semua kalimat akan dimasukan kedalam kolom tanpa membuat baris baru */
+}
+
+.item {
+  background-color: #72bd50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) {
+  background-color: #ffdcdc;
+}

@@ -1,0 +1,46 @@
+.container {
+  width: 600px;
+  margin: 50px auto;
+  border: 3px solid bisque;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #9fb3df;
+  padding: 70px;
+}
+
+.container .content {
+  display: flex;
+}
+
+.content .sidebar {
+  flex: 2;
+}
+
+.content aside {
+  background-color: #9ec6f3;
+  padding: 20px;
+}
+
+.content nav {
+  background-color: #bddde4;
+  padding: 30px;
+}
+
+.content main {
+  background-color: #fff1d5;
+  box-sizing: border-box;
+  flex: 3;
+  display: flex;
+}
+
+.content main span {
+  margin: auto;
+}
+footer {
+  background-color: #f3d6d6;
+  padding: 10px;
+}
